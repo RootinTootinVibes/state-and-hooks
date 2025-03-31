@@ -4,10 +4,12 @@ function TodoList() {
     const [todos, setTodos] = useState([]);
     const [inputValue, setInputValue] = useState('');
 
+    //stores current text for list
     function handleInputChange(event) {
         setInputValue(event.target.value);
     }
 
+    //adds new text item to the list
     function handleSubmit() {
         if (inputValue.trim()) {
             setTodos([...todos, inputValue.trim()]);
@@ -15,6 +17,7 @@ function TodoList() {
         }
     }
 
+    //removes selected items from the list
     function handleDelete(index) {
         setTodos(todos.filter((_, i) => i !==index));
     }
