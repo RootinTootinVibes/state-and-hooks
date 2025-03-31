@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 const TextField = () => {
     const [inputValue, setInputValue] = useState('');
     
-    //Handles the change to the displayed text
     const handleChange = (e) => {
         setInputValue(e.target.value);
     };
